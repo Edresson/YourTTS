@@ -1,0 +1,13 @@
+target_spk_ref,generated
+Audios/Voice-Conversion/EN-EN/F-F/reference/p335_022.wav,Audios/Voice-Conversion/EN-EN/F-F/generated/p225_to_p335_sample_p335_022.wav
+Audios/Voice-Conversion/EN-EN/F-F/reference/p294_005.wav,Audios/Voice-Conversion/EN-EN/F-F/generated/p225_to_p294_sample_p294_005.wav
+Audios/Voice-Conversion/EN-EN/F-F/reference/p261_064.wav,Audios/Voice-Conversion/EN-EN/F-F/generated/p225_to_p261_sample_p261_064.wav
+Audios/Voice-Conversion/EN-EN/F-F/reference/p225_166.wav,Audios/Voice-Conversion/EN-EN/F-F/generated/p335_to_p225_sample_p225_166.wav
+Audios/Voice-Conversion/EN-EN/F-F/reference/p294_005.wav,Audios/Voice-Conversion/EN-EN/F-F/generated/p335_to_p294_sample_p294_005.wav
+Audios/Voice-Conversion/EN-EN/F-F/reference/p261_064.wav,Audios/Voice-Conversion/EN-EN/F-F/generated/p335_to_p261_sample_p261_064.wav
+Audios/Voice-Conversion/EN-EN/F-F/reference/p225_314.wav,Audios/Voice-Conversion/EN-EN/F-F/generated/p294_to_p225_sample_p225_314.wav
+Audios/Voice-Conversion/EN-EN/F-F/reference/p335_022.wav,Audios/Voice-Conversion/EN-EN/F-F/generated/p294_to_p335_sample_p335_022.wav
+Audios/Voice-Conversion/EN-EN/F-F/reference/p261_064.wav,Audios/Voice-Conversion/EN-EN/F-F/generated/p294_to_p261_sample_p261_064.wav
+Audios/Voice-Conversion/EN-EN/F-F/reference/p225_007.wav,Audios/Voice-Conversion/EN-EN/F-F/generated/p261_to_p225_sample_p225_007.wav
+Audios/Voice-Conversion/EN-EN/F-F/reference/p335_022.wav,Audios/Voice-Conversion/EN-EN/F-F/generated/p261_to_p335_sample_p335_022.wav
+Audios/Voice-Conversion/EN-EN/F-F/reference/p294_005.wav,Audios/Voice-Conversion/EN-EN/F-F/generated/p261_to_p294_sample_p294_005.wav

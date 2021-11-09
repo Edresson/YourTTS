@@ -1,0 +1,17 @@
+target_spk_ref,generated
+Audios/Voice-Conversion/EN-EN/M-F/reference/p225_166.wav,Audios/Voice-Conversion/EN-EN/M-F/generated/p245_to_p225_sample_p225_166.wav
+Audios/Voice-Conversion/EN-EN/M-F/reference/p335_005.wav,Audios/Voice-Conversion/EN-EN/M-F/generated/p245_to_p335_sample_p335_005.wav
+Audios/Voice-Conversion/EN-EN/M-F/reference/p294_005.wav,Audios/Voice-Conversion/EN-EN/M-F/generated/p245_to_p294_sample_p294_005.wav
+Audios/Voice-Conversion/EN-EN/M-F/reference/p261_064.wav,Audios/Voice-Conversion/EN-EN/M-F/generated/p245_to_p261_sample_p261_064.wav
+Audios/Voice-Conversion/EN-EN/M-F/reference/p225_166.wav,Audios/Voice-Conversion/EN-EN/M-F/generated/p326_to_p225_sample_p225_166.wav
+Audios/Voice-Conversion/EN-EN/M-F/reference/p335_005.wav,Audios/Voice-Conversion/EN-EN/M-F/generated/p326_to_p335_sample_p335_005.wav
+Audios/Voice-Conversion/EN-EN/M-F/reference/p294_005.wav,Audios/Voice-Conversion/EN-EN/M-F/generated/p326_to_p294_sample_p294_005.wav
+Audios/Voice-Conversion/EN-EN/M-F/reference/p261_064.wav,Audios/Voice-Conversion/EN-EN/M-F/generated/p326_to_p261_sample_p261_064.wav
+Audios/Voice-Conversion/EN-EN/M-F/reference/p225_166.wav,Audios/Voice-Conversion/EN-EN/M-F/generated/p302_to_p225_sample_p225_166.wav
+Audios/Voice-Conversion/EN-EN/M-F/reference/p335_005.wav,Audios/Voice-Conversion/EN-EN/M-F/generated/p302_to_p335_sample_p335_005.wav
+Audios/Voice-Conversion/EN-EN/M-F/reference/p294_005.wav,Audios/Voice-Conversion/EN-EN/M-F/generated/p302_to_p294_sample_p294_005.wav
+Audios/Voice-Conversion/EN-EN/M-F/reference/p261_064.wav,Audios/Voice-Conversion/EN-EN/M-F/generated/p302_to_p261_sample_p261_064.wav
+Audios/Voice-Conversion/EN-EN/M-F/reference/p225_005.wav,Audios/Voice-Conversion/EN-EN/M-F/generated/p347_to_p225_sample_p225_005.wav
+Audios/Voice-Conversion/EN-EN/M-F/reference/p335_005.wav,Audios/Voice-Conversion/EN-EN/M-F/generated/p347_to_p335_sample_p335_005.wav
+Audios/Voice-Conversion/EN-EN/M-F/reference/p294_005.wav,Audios/Voice-Conversion/EN-EN/M-F/generated/p347_to_p294_sample_p294_005.wav
+Audios/Voice-Conversion/EN-EN/M-F/reference/p261_064.wav,Audios/Voice-Conversion/EN-EN/M-F/generated/p347_to_p261_sample_p261_064.wav

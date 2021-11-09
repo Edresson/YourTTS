@@ -1,0 +1,703 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>SC-GlowTTS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/x-icon" href="favicons/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section id="page-header" class="page-header">
+        <div id="bg-header"></div>
+        <canvas id="demo-canvas"></canvas>
+        <div class="main-title">
+          <h1 class="project-name"><span><a href="index.html">SC-GlowTTS</a></span></h1>
+          <!-- <h2 class="project-tagline">Sentence Boundary Detection using Deep Learning</h2> -->
+          <h2 class="project-tagline">An Efficient Zero-Shot Multi-Speaker Text-To-Speech Model</h2>
+          <!-- <a href="https://github.com/mtreviso/deepbond" class="btn">Ver no GitHub</a> -->
+           <!-- <div class="dropdown">
+             <!-- <a href="projeto.html" class="btn">O Projeto</a>
+            <div class="dropdown-content">
+              <a href="projeto.html#introducao">Introdução</a>
+              <a href="projeto.html#hipoteses">Hipóteses</a>
+              <a href="projeto.html#objetivos">Objetivos</a>
+              <a href="projeto.html#metodologia">Metodologia</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="ferramenta.html" class="btn">A Ferramenta</a>
+            <div class="dropdown-content">
+              <a href="ferramenta.html#instalacao">Como instalar</a>
+              <a href="ferramenta.html#uso">Como usar</a>
+              <a href="ferramenta.html#treinamento">Como treinar um modelo</a>
+            </div>
+          </div>
+
+          <a href="recursos.html" class="btn">Recursos</a>
+          <a href="pesquisadores.html" class="btn">Pesquisadores</a>
+          <a href="publicacoes.html" class="btn">Publicações</a>
+          <a href="contato.html" class="btn">Contato</a>-->
+
+        </div>-->
+    </section>
+
+    <section class="main-content">
+
+      <center>
+        <a href="https://github.com/Edresson/YourTTS/" class="btn2">• GitHub •</a>
+       <a href="" class="btn2">• Paper on arXiv •</a></li>
+       <a href="https://github.com/Edresson/SC-GlowTTS/#colab-demos" class="btn2">• Colab demos •</a></li>
+       
+       <!-- <a href="tutorial.html" class="btn2">• Tutorial •</a>  -->
+       <!-- <a href="http://fw.nilc.icmc.usp.br:23680/" target="_blank" class="btn2">• Interface Online •</a> -->
+      </center>
+
+
+
+
+        <br>
+        <br>
+        <div style="text-align: center;">
+          <h2>YourTTS: Towards Zero-Shot Multi-Speaker TTS and Zero-Shot Voice Conversion for everyone</h3>
+
+            <p> <b>Edresson Casanova, Julian Weber, Christopher Shulby,  Arnaldo Candido Junior, Anderson da Silva Soares, Moacir Antonelli Ponti and  Eren Gölge</b></p>
+        
+
+        </div>
+
+
+        <h3>Abstract:</h3>
+
+      <p>
+        
+      </p>
+
+      <h3>System architecture:</h3>
+
+       <center><p><img src="resources/yourtts.png" width="560"></p></center>
+    
+
+      <h3>Zero-shot Multi-Speaker TTS</h3>
+
+      <p><b>Audio Samples for VCTK test speakers</b></p>
+
+<table border="1">
+<tr><td>Model</td><td colspan="12">Unseen Speakers (test)</td></tr>
+<tr>
+  <td></td>
+ 
+	<td>p225</td><td>p234</td><td>p238</td><td>p245</td>
+	<td>p248</td><td>p261</td><td>p294</td><td>p302</td>
+	<td>p326</td><td>p335</td><td>p347</td>
+</tr>
+
+
+<tr><td>Emb reference</td>
+  
+
+<td><audio controls style="width: 110px;" src="audios_demo/reference/p225_005.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/reference/p234_005.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/reference/p238_005.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/reference/p245_005.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/reference/p248_005.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/reference/p261_005.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/reference/p294_005.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/reference/p302_005.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/reference/p326_005.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/reference/p335_005.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/reference/p347_005.wav"></audio></td>
+
+
+<tr><td>SC-GlowTTS-Trans</td>
+  <td><audio controls style="width: 110px;" src="audios_demo/SC-GlowTTS-Trans/p225/1.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/SC-GlowTTS-Trans/p234/6.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/SC-GlowTTS-Trans/p238/12.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/SC-GlowTTS-Trans/p245/18.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/SC-GlowTTS-Trans/p248/24.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/SC-GlowTTS-Trans/p261/29.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/SC-GlowTTS-Trans/p294/31.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/SC-GlowTTS-Trans/p302/38.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/SC-GlowTTS-Trans/p326/41.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/SC-GlowTTS-Trans/p335/48.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/SC-GlowTTS-Trans/p347/50.wav"></audio></td>
+  
+</tr>
+<tr><td>Exp.1</td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_VCTK_SECS/p225_25.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_VCTK_SECS/p234_35.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_VCTK_SECS/p238_0.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_VCTK_SECS/p245_10.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_VCTK_SECS/p248_45.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_VCTK_SECS/p261_50.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_VCTK_SECS/p294_30.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_VCTK_SECS/p302_5.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_VCTK_SECS/p326_15.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_VCTK_SECS/p335_20.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_VCTK_SECS/p347_40.wav"></audio></td>
+</tr>
+<tr><td>Exp.1 + SCL</td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_VCTK_SECS/p225_25.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_VCTK_SECS/p234_35.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_VCTK_SECS/p238_0.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_VCTK_SECS/p245_10.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_VCTK_SECS/p248_45.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_VCTK_SECS/p261_50.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_VCTK_SECS/p294_30.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_VCTK_SECS/p302_5.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_VCTK_SECS/p326_15.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_VCTK_SECS/p335_20.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_VCTK_SECS/p347_40.wav"></audio></td>
+</tr>
+
+<tr><td>Exp.2</td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_VCTK_SECS/p225_25.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_VCTK_SECS/p234_35.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_VCTK_SECS/p238_0.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_VCTK_SECS/p245_10.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_VCTK_SECS/p248_45.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_VCTK_SECS/p261_50.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_VCTK_SECS/p294_30.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_VCTK_SECS/p302_5.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_VCTK_SECS/p326_15.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_VCTK_SECS/p335_20.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_VCTK_SECS/p347_40.wav"></audio></td>
+</tr>
+<tr><td>Exp.2 + SCL</td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_VCTK_SECS/p225_25.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_VCTK_SECS/p234_35.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_VCTK_SECS/p238_0.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_VCTK_SECS/p245_10.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_VCTK_SECS/p248_45.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_VCTK_SECS/p261_50.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_VCTK_SECS/p294_30.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_VCTK_SECS/p302_5.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_VCTK_SECS/p326_15.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_VCTK_SECS/p335_20.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_VCTK_SECS/p347_40.wav"></audio></td>
+</tr>
+
+<tr><td>Exp.3</td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_VCTK_SECS/p225_25.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_VCTK_SECS/p234_35.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_VCTK_SECS/p238_0.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_VCTK_SECS/p245_10.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_VCTK_SECS/p248_45.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_VCTK_SECS/p261_50.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_VCTK_SECS/p294_30.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_VCTK_SECS/p302_5.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_VCTK_SECS/p326_15.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_VCTK_SECS/p335_20.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_VCTK_SECS/p347_40.wav"></audio></td>
+</tr>
+<tr><td>Exp.3 + SCL</td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_VCTK_SECS/p225_25.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_VCTK_SECS/p234_35.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_VCTK_SECS/p238_0.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_VCTK_SECS/p245_10.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_VCTK_SECS/p248_45.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_VCTK_SECS/p261_50.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_VCTK_SECS/p294_30.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_VCTK_SECS/p302_5.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_VCTK_SECS/p326_15.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_VCTK_SECS/p335_20.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_VCTK_SECS/p347_40.wav"></audio></td>
+</tr>
+
+<tr><td>Exp.4 + SCL</td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_VCTK_SECS/p225_25.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_VCTK_SECS/p234_35.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_VCTK_SECS/p238_0.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_VCTK_SECS/p245_10.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_VCTK_SECS/p248_45.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_VCTK_SECS/p261_50.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_VCTK_SECS/p294_30.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_VCTK_SECS/p302_5.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_VCTK_SECS/p326_15.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_VCTK_SECS/p335_20.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_VCTK_SECS/p347_40.wav"></audio></td>
+</tr>
+
+</table>
+
+<p><b>Audio Samples for LibriTTS test speakers</b></p>
+
+<table border="1">
+  <tr><td>Model</td><td colspan="12">Unseen Speakers (test)</td></tr>
+  <tr>
+    <td></td>
+   
+    <td>1089</td><td>1188</td><td>121</td><td>1284</td>
+    <td>1580</td><td>1995</td><td>2300</td><td>237</td>
+    <td>260</td><td>908</td>
+  </tr>
+  
+  
+  <tr><td>Emb reference</td>
+    
+  
+  <td><audio controls style="width: 110px;" src="audios_demo/reference/1089_134686_000008_000000.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/reference/1188_133604_000006_000000.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/reference/121_121726_000004_000003.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/reference/1284_1180_000005_000001.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/reference/1580_141083_000001_000002.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/reference/1995_1826_000018_000004.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/reference/2300_131720_000012_000002.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/reference/237_126133_000004_000000.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/reference/260_123286_000032_000002.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/reference/908_31957_000025_000001.wav"></audio></td>
+</tr>
+  <tr><td>Ground truth</td>
+    <td><audio controls style="width: 110px;" src="audios_demo/GT/Libri-TTS/1089_m/1089_134686_000002_000004.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/GT/Libri-TTS/1188_m/1188_133604_000011_000003.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/GT/Libri-TTS/121_f/121_121726_000005_000001.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/GT/Libri-TTS/1284_f/1284_1180_000004_000004.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/GT/Libri-TTS/1580_f/1580_141083_000006_000001.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/GT/Libri-TTS/1995_f/1995_1826_000004_000003.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/GT/Libri-TTS/2300_m/2300_131720_000005_000005.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/GT/Libri-TTS/237_f/237_126133_000002_000003.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/GT/Libri-TTS/260_m/260_123286_000024_000000.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/GT/Libri-TTS/908_m/908_157963_000004_000000.wav"></audio></td>
+
+  </tr>
+
+  <tr><td>Exp.1</td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_LibriTTS_SECS/1089_0.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_LibriTTS_SECS/1188_10.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_LibriTTS_SECS/121_45.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_LibriTTS_SECS/1284_5.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_LibriTTS_SECS/1580_40.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_LibriTTS_SECS/1995_15.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_LibriTTS_SECS/2300_25.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_LibriTTS_SECS/237_20.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_LibriTTS_SECS/260_30.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model/English_LibriTTS_SECS/908_35.wav"></audio></td>
+  </tr>
+  
+  <tr><td>Exp.1 + SCL</td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_LibriTTS_SECS/1089_0.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_LibriTTS_SECS/1188_10.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_LibriTTS_SECS/121_45.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_LibriTTS_SECS/1284_5.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_LibriTTS_SECS/1580_40.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_LibriTTS_SECS/1995_15.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_LibriTTS_SECS/2300_25.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_LibriTTS_SECS/237_20.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_LibriTTS_SECS/260_30.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.1/model+SCL/English_LibriTTS_SECS/908_35.wav"></audio></td>
+  </tr>
+  
+
+  <tr><td>Exp.2</td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_LibriTTS_SECS/1089_0.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_LibriTTS_SECS/1188_10.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_LibriTTS_SECS/121_45.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_LibriTTS_SECS/1284_5.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_LibriTTS_SECS/1580_40.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_LibriTTS_SECS/1995_15.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_LibriTTS_SECS/2300_25.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_LibriTTS_SECS/237_20.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_LibriTTS_SECS/260_30.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/English_LibriTTS_SECS/908_35.wav"></audio></td>
+  </tr>
+  
+  <tr><td>Exp.2 + SCL</td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_LibriTTS_SECS/1089_0.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_LibriTTS_SECS/1188_10.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_LibriTTS_SECS/121_45.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_LibriTTS_SECS/1284_5.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_LibriTTS_SECS/1580_40.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_LibriTTS_SECS/1995_15.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_LibriTTS_SECS/2300_25.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_LibriTTS_SECS/237_20.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_LibriTTS_SECS/260_30.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/English_LibriTTS_SECS/908_35.wav"></audio></td>
+  </tr>
+
+  <tr><td>Exp.3</td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_LibriTTS_SECS/1089_0.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_LibriTTS_SECS/1188_10.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_LibriTTS_SECS/121_45.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_LibriTTS_SECS/1284_5.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_LibriTTS_SECS/1580_40.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_LibriTTS_SECS/1995_15.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_LibriTTS_SECS/2300_25.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_LibriTTS_SECS/237_20.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_LibriTTS_SECS/260_30.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/English_LibriTTS_SECS/908_35.wav"></audio></td>
+  </tr>
+  
+  <tr><td>Exp.3 + SCL</td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_LibriTTS_SECS/1089_0.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_LibriTTS_SECS/1188_10.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_LibriTTS_SECS/121_45.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_LibriTTS_SECS/1284_5.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_LibriTTS_SECS/1580_40.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_LibriTTS_SECS/1995_15.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_LibriTTS_SECS/2300_25.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_LibriTTS_SECS/237_20.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_LibriTTS_SECS/260_30.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/English_LibriTTS_SECS/908_35.wav"></audio></td>
+  </tr>
+
+  <tr><td>Exp.4 + SCL</td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_LibriTTS_SECS/1089_0.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_LibriTTS_SECS/1188_10.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_LibriTTS_SECS/121_45.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_LibriTTS_SECS/1284_5.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_LibriTTS_SECS/1580_40.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_LibriTTS_SECS/1995_15.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_LibriTTS_SECS/2300_25.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_LibriTTS_SECS/237_20.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_LibriTTS_SECS/260_30.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/English_LibriTTS_SECS/908_35.wav"></audio></td>
+  </tr>
+
+  </table>
+
+
+  <p><b>Audio Samples for MLS Portuguese test speakers</b></p>
+
+  <table border="1">
+    <tr><td>Model</td><td colspan="12">Unseen Speakers (test)</td></tr>
+    <tr>
+      <td></td>
+     
+      <td>11995</td><td>12249</td><td>12287</td><td>12710</td>
+      <td>13069</td><td>3050</td><td>4367</td><td>5677</td>
+      <td>7925</td><td>9351</td>
+    </tr>
+    
+    
+    <tr><td>Emb reference</td>
+      
+    
+    <td><audio controls style="width: 110px;" src="audios_demo/reference/11995_10229_000007.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/reference/12249_12765_000220.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/reference/12287_12742_000007.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/reference/12710_10229_000006.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/reference/13069_13511_000007.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/reference/3050_2941_000034.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/reference/4367_4272_000319.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/reference/5677_4807_000094.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/reference/7925_6390_000006.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/reference/9351_9018_000173.wav"></audio></td>
+  </tr>
+
+  <tr><td>Exp.2</td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/Portuguese_MLS_SECS/11995_25.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/Portuguese_MLS_SECS/12249_15.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/Portuguese_MLS_SECS/12287_45.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/Portuguese_MLS_SECS/12710_40.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/Portuguese_MLS_SECS/13069_31.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/Portuguese_MLS_SECS/3050_0.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/Portuguese_MLS_SECS/4367_5.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/Portuguese_MLS_SECS/5677_21.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/Portuguese_MLS_SECS/7925_35.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model/Portuguese_MLS_SECS/9351_10.wav"></audio></td>
+  </tr>
+  <tr><td>Exp.2 + SCL</td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/Portuguese_MLS_SECS/11995_25.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/Portuguese_MLS_SECS/12249_15.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/Portuguese_MLS_SECS/12287_45.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/Portuguese_MLS_SECS/12710_40.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/Portuguese_MLS_SECS/13069_31.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/Portuguese_MLS_SECS/3050_0.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/Portuguese_MLS_SECS/4367_5.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/Portuguese_MLS_SECS/5677_21.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/Portuguese_MLS_SECS/7925_35.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.2/model+SCL/Portuguese_MLS_SECS/9351_10.wav"></audio></td>
+  </tr>
+  <tr><td>Exp.3</td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/Portuguese_MLS_SECS/11995_25.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/Portuguese_MLS_SECS/12249_15.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/Portuguese_MLS_SECS/12287_45.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/Portuguese_MLS_SECS/12710_40.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/Portuguese_MLS_SECS/13069_31.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/Portuguese_MLS_SECS/3050_0.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/Portuguese_MLS_SECS/4367_5.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/Portuguese_MLS_SECS/5677_21.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/Portuguese_MLS_SECS/7925_35.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model/Portuguese_MLS_SECS/9351_10.wav"></audio></td>
+  </tr>
+  <tr><td>Exp.3 + SCL</td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/Portuguese_MLS_SECS/11995_25.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/Portuguese_MLS_SECS/12249_15.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/Portuguese_MLS_SECS/12287_45.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/Portuguese_MLS_SECS/12710_40.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/Portuguese_MLS_SECS/13069_31.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/Portuguese_MLS_SECS/3050_0.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/Portuguese_MLS_SECS/4367_5.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/Portuguese_MLS_SECS/5677_21.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/Portuguese_MLS_SECS/7925_35.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.3/model+SCL/Portuguese_MLS_SECS/9351_10.wav"></audio></td>
+  </tr>
+  <tr><td>Exp.4 + SCL</td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/Portuguese_MLS_SECS/11995_25.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/Portuguese_MLS_SECS/12249_15.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/Portuguese_MLS_SECS/12287_45.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/Portuguese_MLS_SECS/12710_40.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/Portuguese_MLS_SECS/13069_31.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/Portuguese_MLS_SECS/3050_0.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/Portuguese_MLS_SECS/4367_5.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/Portuguese_MLS_SECS/5677_21.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/Portuguese_MLS_SECS/7925_35.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/Exp.4/model+SCL/Portuguese_MLS_SECS/9351_10.wav"></audio></td>
+  </tr>
+</table>
+
+
+<h3>Zero-Shot Voice Conversion</h3> 
+Exp.4 + SCL
+
+<p>The rows present the ground truth audios converted into the voice of the speakers of each column.</p>
+
+<p><b>English speakers to English Speakers</b></p>
+<table border="1">
+  <tr><td>Model</td><td colspan="13">Unseen Speakers (test)</td></tr>
+  <tr>
+    <td></td>
+   
+    <td>Ground truth</td><td>p225</td><td>p234</td><td>p238</td><td>p245</td>
+    <td>p248</td><td>p261</td><td>p294</td><td>p302</td>
+    <td>p326</td><td>p335</td><td>p347</td>
+  </tr>
+  
+
+  <tr><td>p234</td>
+    <td><audio controls style="width: 110px;" src="audios_demo/GT/VCTK/p234/p234_017.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p234_017.wav+p225_002.wav.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p234_017.wav+p234_017.wav.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p234_017.wav+p238_004.wav.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p234_017.wav+p245_166.wav.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p234_017.wav+p248_082.wav.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p234_017.wav+p261_104.wav.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p234_017.wav+p294_123.wav.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p234_017.wav+p302_289.wav.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p234_017.wav+p326_316.wav.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p234_017.wav+p335_082.wav.wav"></audio></td>
+    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p234_017.wav+p347_039.wav.wav"></audio></td>
+
+
+   
+      <tr><td>p245</td>
+        <td><audio controls style="width: 110px;" src="audios_demo/GT/VCTK/p245_166.wav"></audio></td>
+        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p245_166.wav+p225_002.wav.wav"></audio></td>
+        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p245_166.wav+p234_017.wav.wav"></audio></td>
+        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p245_166.wav+p238_004.wav.wav"></audio></td>
+        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p245_166.wav+p245_166.wav.wav"></audio></td>
+        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p245_166.wav+p248_082.wav.wav"></audio></td>
+        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p245_166.wav+p261_104.wav.wav"></audio></td>
+        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p245_166.wav+p294_123.wav.wav"></audio></td>
+        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p245_166.wav+p302_289.wav.wav"></audio></td>
+        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p245_166.wav+p326_316.wav.wav"></audio></td>
+        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p245_166.wav+p335_082.wav.wav"></audio></td>
+        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p245_166.wav+p347_039.wav.wav"></audio></td>
+
+        
+          <tr><td>p261</td>
+            <td><audio controls style="width: 110px;" src="audios_demo/GT/VCTK/p261_104.wav"></audio></td>
+            <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p261_104.wav+p225_002.wav.wav"></audio></td>
+            <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p261_104.wav+p234_017.wav.wav"></audio></td>
+            <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p261_104.wav+p238_004.wav.wav"></audio></td>
+            <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p261_104.wav+p245_166.wav.wav"></audio></td>
+            <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p261_104.wav+p248_082.wav.wav"></audio></td>
+            <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p261_104.wav+p261_104.wav.wav"></audio></td>
+            <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p261_104.wav+p294_123.wav.wav"></audio></td>
+            <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p261_104.wav+p302_289.wav.wav"></audio></td>
+            <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p261_104.wav+p326_316.wav.wav"></audio></td>
+            <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p261_104.wav+p335_082.wav.wav"></audio></td>
+            <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p261_104.wav+p347_039.wav.wav"></audio></td>
+    
+
+            <tr><td>p294</td>
+              <td><audio controls style="width: 110px;" src="audios_demo/GT/VCTK/p294_123.wav"></audio></td>
+              <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p294_123.wav+p225_002.wav.wav"></audio></td>
+              <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p294_123.wav+p234_017.wav.wav"></audio></td>
+              <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p294_123.wav+p238_004.wav.wav"></audio></td>
+              <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p294_123.wav+p245_166.wav.wav"></audio></td>
+              <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p294_123.wav+p248_082.wav.wav"></audio></td>
+              <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p294_123.wav+p261_104.wav.wav"></audio></td>
+              <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p294_123.wav+p294_123.wav.wav"></audio></td>
+              <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p294_123.wav+p302_289.wav.wav"></audio></td>
+              <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p294_123.wav+p326_316.wav.wav"></audio></td>
+              <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p294_123.wav+p335_082.wav.wav"></audio></td>
+              <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p294_123.wav+p347_039.wav.wav"></audio></td>
+      
+        
+                
+                <tr><td>p326</td>
+                <td><audio controls style="width: 110px;" src="audios_demo/GT/VCTK/p326_316.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p326_316.wav+p225_002.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p326_316.wav+p234_017.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p326_316.wav+p238_004.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p326_316.wav+p245_166.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p326_316.wav+p248_082.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p326_316.wav+p261_104.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p326_316.wav+p294_123.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p326_316.wav+p302_289.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p326_316.wav+p326_316.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p326_316.wav+p335_082.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p326_316.wav+p347_039.wav.wav"></audio></td>
+
+                <tr><td>p335</td>
+                <td><audio controls style="width: 110px;" src="audios_demo/GT/VCTK/p335_082.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p335_082.wav+p225_002.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p335_082.wav+p234_017.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p335_082.wav+p238_004.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p335_082.wav+p245_166.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p335_082.wav+p248_082.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p335_082.wav+p261_104.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p335_082.wav+p294_123.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p335_082.wav+p302_289.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p335_082.wav+p326_316.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p335_082.wav+p335_082.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p335_082.wav+p347_039.wav.wav"></audio></td>
+                
+                <tr><td>p347</td>
+                <td><audio controls style="width: 110px;" src="audios_demo/GT/VCTK/p347_039.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p347_039.wav+p225_002.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p347_039.wav+p234_017.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p347_039.wav+p238_004.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p347_039.wav+p245_166.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p347_039.wav+p248_082.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p347_039.wav+p261_104.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p347_039.wav+p294_123.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p347_039.wav+p302_289.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p347_039.wav+p326_316.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p347_039.wav+p335_082.wav.wav"></audio></td>
+                <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p347_039.wav+p347_039.wav.wav"></audio></td>
+                
+                <tr><td>p238</td>
+                  <td><audio controls style="width: 110px;" src="audios_demo/GT/VCTK/p238/p238_004.wav"></audio></td>
+                  <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p238_004.wav+p225_002.wav.wav"></audio></td>
+                  <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p238_004.wav+p234_017.wav.wav"></audio></td>
+                  <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p238_004.wav+p238_004.wav.wav"></audio></td>
+                  <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p238_004.wav+p245_166.wav.wav"></audio></td>
+                  <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p238_004.wav+p248_082.wav.wav"></audio></td>
+                  <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p238_004.wav+p261_104.wav.wav"></audio></td>
+                  <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p238_004.wav+p294_123.wav.wav"></audio></td>
+                  <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p238_004.wav+p302_289.wav.wav"></audio></td>
+                  <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p238_004.wav+p326_316.wav.wav"></audio></td>
+                  <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p238_004.wav+p335_082.wav.wav"></audio></td>
+                  <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p238_004.wav+p347_039.wav.wav"></audio></td>
+                  
+                  <tr><td>p248</td>
+                    <td><audio controls style="width: 110px;" src="audios_demo/GT/VCTK/p248_082.wav"></audio></td>
+                    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p248_082.wav+p225_002.wav.wav"></audio></td>
+                    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p248_082.wav+p234_017.wav.wav"></audio></td>
+                    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p248_082.wav+p238_004.wav.wav"></audio></td>
+                    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p248_082.wav+p245_166.wav.wav"></audio></td>
+                    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p248_082.wav+p248_082.wav.wav"></audio></td>
+                    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p248_082.wav+p261_104.wav.wav"></audio></td>
+                    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p248_082.wav+p294_123.wav.wav"></audio></td>
+                    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p248_082.wav+p302_289.wav.wav"></audio></td>
+                    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p248_082.wav+p326_316.wav.wav"></audio></td>
+                    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p248_082.wav+p335_082.wav.wav"></audio></td>
+                    <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p248_082.wav+p347_039.wav.wav"></audio></td>
+            
+                    <tr><td>p302</td>
+                      <td><audio controls style="width: 110px;" src="audios_demo/GT/VCTK/p302_289.wav"></audio></td>
+                      <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p302_289.wav+p225_002.wav.wav"></audio></td>
+                      <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p302_289.wav+p234_017.wav.wav"></audio></td>
+                      <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p302_289.wav+p238_004.wav.wav"></audio></td>
+                      <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p302_289.wav+p245_166.wav.wav"></audio></td>
+                      <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p302_289.wav+p248_082.wav.wav"></audio></td>
+                      <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p302_289.wav+p261_104.wav.wav"></audio></td>
+                      <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p302_289.wav+p294_123.wav.wav"></audio></td>
+                      <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p302_289.wav+p302_289.wav.wav"></audio></td>
+                      <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p302_289.wav+p326_316.wav.wav"></audio></td>
+                      <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p302_289.wav+p335_082.wav.wav"></audio></td>
+                      <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p302_289.wav+p347_039.wav.wav"></audio></td>
+
+                      <tr><td>p225</td>
+                        <td><audio controls style="width: 110px;" src="audios_demo/GT/VCTK/p225/p225_002.wav"></audio></td>
+                        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p225_002.wav+p225_002.wav.wav"></audio></td>
+                        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p225_002.wav+p234_017.wav.wav"></audio></td>
+                        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p225_002.wav+p238_004.wav.wav"></audio></td>
+                        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p225_002.wav+p245_166.wav.wav"></audio></td>
+                        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p225_002.wav+p248_082.wav.wav"></audio></td>
+                        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p225_002.wav+p261_104.wav.wav"></audio></td>
+                        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p225_002.wav+p294_123.wav.wav"></audio></td>
+                        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p225_002.wav+p302_289.wav.wav"></audio></td>
+                        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p225_002.wav+p326_316.wav.wav"></audio></td>
+                        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p225_002.wav+p335_082.wav.wav"></audio></td>
+                        <td><audio controls style="width: 110px;" src="audios_demo/vc-samples-hifi-not-ft/p225_002.wav+p347_039.wav.wav"></audio></td>
+            </tr>
+
+          </table>
+
+
+
+<h3>Speaker Adaptation</h3> 
+Exp.4 + SCL
+<table border="1">
+  <tr><td>Model</td><td colspan="5">Unseen Speakers (test)</td></tr>
+  <tr>
+    <td></td>
+   
+    <td>English Male</td><td>English Female</td><td>Portuguese Male</td><td>Portuguese Female</td>
+  </tr>
+  
+  
+  <tr><td>GT</td>
+    
+  
+  <td><audio controls style="width: 110px;" src="audios_demo/reference/EN-M.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/reference/EN-F.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/reference/PT-M.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/reference/PT-F.wav"></audio></td>
+</tr>
+
+<tr><td>ZS</td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.5/English/Zero-shot-from-exp3/EN-M.wav_0.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.5/English/Zero-shot-from-exp3/EN-F.wav_0.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.5/Portuguese/Zero-shot-from-exp3/PT-M.wav_1.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.5/Portuguese/Zero-shot-from-exp3/PT-F.wav_10.wav"></audio></td>
+  
+</tr>
+
+
+<tr><td>FT</td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.5/English/After-FT-1-min/M-1.5k/EN-M.wav_0.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.5/English/After-FT-1-min/F-1.5k/EN-F.wav_0.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.5/Portuguese/After-FT-1-min/M-1.5k/PT-M.wav_1.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/Exp.5/Portuguese/After-FT-1-min/F-1.5/PT-F.wav_10.wav"></audio></td>
+  
+</tr>
+
+
+
+
+</table>
+
+<h3>Citation</h3>
+      <pre class="highlight">
+
+
+      </pre>
+
+     
+      <footer class="site-footer">
+          <a href="http://icmc.usp.br/" title="Institute of Mathematics and Computer Science (ICMC)" target="_blank"> <img src="img/icmc.png" border="0" height="55"> </a>
+           <!--<a href="http://nilc.icmc.usp.br/" title="The Interinstitutional Center for Computational Linguistics(NILC)" target="_blank"> <img src="img/nilc.png" border="0" height="50"> </a>-->
+          <a href="http://www.deeplearningbrasil.com.br/" title="Deep Learning Brasil" target="_blank"> <img src="img/dlb.png" border="0" height="50"> </a>
+          <a href="http://www.definedcrowd.com/" title="DefinedCrowd Corp." target="_blank"> <img src="img/df.png" border="0" height="50"> </a>
+          <a href="https://coqui.ai/" title="Coqui AI" target="_blank"> <img src="img/coqui.png" border="0" height="40"> </a>
+          <div class="cleaner"></div>
+      </footer>
+    <span class="site-footer-owner"><center></center></span>
+    </section>
+
+
+
+
+    <script src="js/animheader.js"></script>
+  
+  </body>
+</html>

@@ -1,0 +1,13 @@
+target_spk_ref,generated
+Audios/Voice-Conversion/PT-PT/F-F/reference/7925_6390_000006.wav,Audios/Voice-Conversion/PT-PT/F-F/generated/3050_to_7925_sample_7925_6390_000006.wav
+Audios/Voice-Conversion/PT-PT/F-F/reference/11995_10229_000003.wav,Audios/Voice-Conversion/PT-PT/F-F/generated/3050_to_11995_sample_11995_10229_000003.wav
+Audios/Voice-Conversion/PT-PT/F-F/reference/13069_13511_000013.wav,Audios/Voice-Conversion/PT-PT/F-F/generated/3050_to_13069_sample_13069_13511_000013.wav
+Audios/Voice-Conversion/PT-PT/F-F/reference/3050_2941_000003.wav,Audios/Voice-Conversion/PT-PT/F-F/generated/7925_to_3050_sample_3050_2941_000003.wav
+Audios/Voice-Conversion/PT-PT/F-F/reference/11995_10229_000007.wav,Audios/Voice-Conversion/PT-PT/F-F/generated/7925_to_11995_sample_11995_10229_000007.wav
+Audios/Voice-Conversion/PT-PT/F-F/reference/13069_13511_000005.wav,Audios/Voice-Conversion/PT-PT/F-F/generated/7925_to_13069_sample_13069_13511_000005.wav
+Audios/Voice-Conversion/PT-PT/F-F/reference/3050_2941_000034.wav,Audios/Voice-Conversion/PT-PT/F-F/generated/11995_to_3050_sample_3050_2941_000034.wav
+Audios/Voice-Conversion/PT-PT/F-F/reference/7925_6390_000004.wav,Audios/Voice-Conversion/PT-PT/F-F/generated/11995_to_7925_sample_7925_6390_000004.wav
+Audios/Voice-Conversion/PT-PT/F-F/reference/13069_13511_000007.wav,Audios/Voice-Conversion/PT-PT/F-F/generated/11995_to_13069_sample_13069_13511_000007.wav
+Audios/Voice-Conversion/PT-PT/F-F/reference/3050_2941_000003.wav,Audios/Voice-Conversion/PT-PT/F-F/generated/13069_to_3050_sample_3050_2941_000003.wav
+Audios/Voice-Conversion/PT-PT/F-F/reference/7925_6390_000001.wav,Audios/Voice-Conversion/PT-PT/F-F/generated/13069_to_7925_sample_7925_6390_000001.wav
+Audios/Voice-Conversion/PT-PT/F-F/reference/11995_10229_000007.wav,Audios/Voice-Conversion/PT-PT/F-F/generated/13069_to_11995_sample_11995_10229_000007.wav
