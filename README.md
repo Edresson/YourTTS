@@ -1,3 +1,3 @@
-# SC-GlowTTS
+# YourTTS
 
 [Web page](https://edresson.github.io/YourTTS/)
