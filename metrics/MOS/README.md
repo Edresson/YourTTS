@@ -5,7 +5,7 @@ You can download the MOS and Sim-MOS samples in: https://github.com/Edresson/You
 
 ## MOS/Sim-MOS per audio
 You can check the MOS for each Audio for English in the "EN/" directory, for Portuguese in the "PT/" directory and for the experiment that was 
-evaluated with annotators of both languages in "EN-PT".
+evaluated with annotators of both languages in "EN-PT/".
 
 ## Recompute MOS/Sim-MOS
 
