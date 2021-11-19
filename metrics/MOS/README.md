@@ -1,7 +1,7 @@
 # YourTTS MOS and Sim-MOS
 
 ## MOS samples
-You can Download the MOS  and Sim-MOS samples in: https://github.com/Edresson/YourTTS/releases/download/MOS/Audios_MOS.zip
+You can download the MOS  and Sim-MOS samples in: https://github.com/Edresson/YourTTS/releases/download/MOS/Audios_MOS.zip
 
 ## MOS/Sim-MOS per audio
 You can check the MOS scores for each Audio for English in the "EN/" directory, for Portuguese in the "PT/" directory and for the experiment that was 
