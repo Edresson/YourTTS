@@ -13,6 +13,8 @@ All of our experiments were implemented at [Coqui TTS](https://github.com/coqui-
 
 ## Checkpoints
 
+All the released checkpoints are licensed under CC BY-NC-ND 4.0
+
 | Model                        | URL                                                                                            |
 |------------------------------|------------------------------------------------------------------------------------------------|
 | Speaker Encoder              | [link](https://drive.google.com/drive/folders/1WKK70aBnA-ZI2Z1Ka_zWgBK7O0Y3TLey?usp=sharing)   |
