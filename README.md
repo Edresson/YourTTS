@@ -25,3 +25,4 @@ All the released checkpoints are licensed under CC BY-NC-ND 4.0
 | Exp 3. YourTTS-EN(VCTK)-PT-FR       | [link](https://drive.google.com/drive/folders/15NAhIeHXJZLxrZMoCaUlH_7mS7TRqdme?usp=sharing) |
 | Exp 3. YourTTS-EN(VCTK)-PT-FR SCL   | [link](https://drive.google.com/drive/folders/1H7VrW6eUO0wle-e6Un3mp77udkZLMrMr?usp=sharing) |
 | Exp 4. YourTTS-EN(VCTK+LibriTTS)-PT-FR SCL | [link](https://drive.google.com/drive/folders/15G-QS5tYQPkqiXfAdialJjmuqZV0azQV?usp=sharing) |
+
