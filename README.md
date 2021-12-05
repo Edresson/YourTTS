@@ -26,3 +26,10 @@ All the released checkpoints are licensed under CC BY-NC-ND 4.0
 | Exp 3. YourTTS-EN(VCTK)-PT-FR SCL   | [link](https://drive.google.com/drive/folders/1H7VrW6eUO0wle-e6Un3mp77udkZLMrMr?usp=sharing) |
 | Exp 4. YourTTS-EN(VCTK+LibriTTS)-PT-FR SCL | [link](https://drive.google.com/drive/folders/15G-QS5tYQPkqiXfAdialJjmuqZV0azQV?usp=sharing) |
 
+
+## Results replicability
+
+To replicability we make the audios used to calculate the MOS available [here](https://github.com/Edresson/YourTTS/releases/download/MOS/Audios_MOS.zip). In addition, we provide the Mean Opinion scores for each audio [here](https://github.com/Edresson/YourTTS/tree/main/metrics/MOS).
+
+To recompute our MOS results follow the instructions [here](https://github.com/Edresson/YourTTS/tree/main/metrics/MOS). To predict the test sequences and compute the SECS results, please use the Jupyter Notebooks available [here](https://github.com/Edresson/YourTTS/tree/main/metrics/SECS).
+
