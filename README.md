@@ -14,6 +14,10 @@ All of our experiments were implemented at [Coqui TTS](https://github.com/coqui-
 
 ## Colab Demos
 
+| Demo                        | URL                                                                                            |
+|------------------------------|------------------------------------------------------------------------------------------------|
+| Zero-Shot TTS              | [link](https://colab.research.google.com/drive/1ftI0x16iqKgiQFgTjTDgRpOM1wC1U-yS?usp=sharing)   |
+| Zero-Shot VC demo         | [link](https://colab.research.google.com/drive/1gjdwOKCZuavPn_5oy8QA01sKmXpEq5AZ?usp=sharing)   |
 
 
 ## Checkpoints
