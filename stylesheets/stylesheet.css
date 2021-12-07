@@ -298,6 +298,9 @@ a:hover {
   margin-top: 2rem;
   border-top: solid 1px #eff0f1; 
   padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   /*width: 100%;*/
   /*background-image: linear-gradient(150deg, #0B3157, #093832);*/
   /*background-image: linear-gradient(120deg, #155799, #159957);*/
@@ -312,10 +315,7 @@ a:hover {
 }
 
 .site-footer img{
-  float: right;
-  margin-left: 2rem;
-  opacity: 0.8;
-  margin-top: -1rem;
+  flex: 1;
 }
 
 .site-footer-owner {
