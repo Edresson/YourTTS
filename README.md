@@ -9,15 +9,15 @@ In our recent [paper](https://arxiv.org/abs/2112.02418) we propose the YourTTS m
 Visit our [website](https://edresson.github.io/YourTTS/) for audio samples.
 
 ## Implementation
-All of our experiments were implemented at [Coqui TTS](https://github.com/coqui-ai/tts).
+All of our experiments were implemented on the [Coqui TTS](https://github.com/coqui-ai/tts) repo. (Still a [PR](https://github.com/coqui-ai/TTS/pull/731)).
 
 
 ## Colab Demos
 
 | Demo                        | URL                                                                                            |
-|------------------------------|------------------------------------------------------------------------------------------------|
-| Zero-Shot TTS              | [link](https://colab.research.google.com/drive/1ftI0x16iqKgiQFgTjTDgRpOM1wC1U-yS?usp=sharing)   |
-| Zero-Shot VC demo         | [link](https://colab.research.google.com/drive/1gjdwOKCZuavPn_5oy8QA01sKmXpEq5AZ?usp=sharing)   |
+|-----------------------------|------------------------------------------------------------------------------------------------|
+| Zero-Shot TTS               | [link](https://colab.research.google.com/drive/1ftI0x16iqKgiQFgTjTDgRpOM1wC1U-yS?usp=sharing)  |
+| Zero-Shot VC                | [link](https://colab.research.google.com/drive/1gjdwOKCZuavPn_5oy8QA01sKmXpEq5AZ?usp=sharing)  |
 
 
 ## Checkpoints
@@ -38,7 +38,7 @@ All the released checkpoints are licensed under CC BY-NC-ND 4.0
 
 ## Results replicability
 
-To replicability we make the audios used to calculate the MOS available [here](https://github.com/Edresson/YourTTS/releases/download/MOS/Audios_MOS.zip). In addition, we provide the Mean Opinion scores for each audio [here](https://github.com/Edresson/YourTTS/tree/main/metrics/MOS).
+To insure replicability, we make the audios used to generate the MOS available [here](https://github.com/Edresson/YourTTS/releases/download/MOS/Audios_MOS.zip). In addition, we provide the MOS for each audio [here](https://github.com/Edresson/YourTTS/tree/main/metrics/MOS).
 
-To recompute our MOS results follow the instructions [here](https://github.com/Edresson/YourTTS/tree/main/metrics/MOS). To predict the test sequences and compute the SECS results, please use the Jupyter Notebooks available [here](https://github.com/Edresson/YourTTS/tree/main/metrics/SECS).
+To re-generate our MOS results, follow the instructions [here](https://github.com/Edresson/YourTTS/tree/main/metrics/MOS). To predict the test sentences and generate the SECS, please use the Jupyter Notebooks available [here](https://github.com/Edresson/YourTTS/tree/main/metrics/SECS).
 
