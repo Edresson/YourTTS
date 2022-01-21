@@ -9,7 +9,7 @@ In our recent [paper](https://arxiv.org/abs/2112.02418) we propose the YourTTS m
 Visit our [website](https://edresson.github.io/YourTTS/) for audio samples.
 
 ## Implementation
-All of our experiments were implemented on the [Coqui TTS](https://github.com/coqui-ai/tts) repo. (Still a [PR](https://github.com/coqui-ai/TTS/pull/731)).
+All of our experiments were implemented on the [Coqui TTS](https://github.com/coqui-ai/tts) repo.
 
 
 ## Colab Demos
