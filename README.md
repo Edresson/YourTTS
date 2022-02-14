@@ -49,3 +49,24 @@ To re-generate our MOS results, follow the instructions [here](https://github.co
   MLS Portuguese:  12710, 5677, 12249, 12287, 9351, 11995, 7925, 3050, 4367 and 13069
   
 
+## Citation
+
+```
+
+@ARTICLE{2021arXiv211202418C,
+  author = {{Casanova}, Edresson and {Weber}, Julian and {Shulby}, Christopher and {Junior}, Arnaldo Candido and {G{\"o}lge}, Eren and {Antonelli Ponti}, Moacir},
+  title = "{YourTTS: Towards Zero-Shot Multi-Speaker TTS and Zero-Shot Voice Conversion for everyone}",
+  journal = {arXiv e-prints},
+  keywords = {Computer Science - Sound, Computer Science - Computation and Language, Electrical Engineering and Systems Science - Audio and Speech Processing},
+  year = 2021,
+  month = dec,
+  eid = {arXiv:2112.02418},
+  pages = {arXiv:2112.02418},
+  archivePrefix = {arXiv},
+  eprint = {2112.02418},
+  primaryClass = {cs.SD},
+  adsurl = {https://ui.adsabs.harvard.edu/abs/2021arXiv211202418C},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+```
