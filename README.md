@@ -41,4 +41,11 @@ All the released checkpoints are licensed under CC BY-NC-ND 4.0
 To insure replicability, we make the audios used to generate the MOS available [here](https://github.com/Edresson/YourTTS/releases/download/MOS/Audios_MOS.zip). In addition, we provide the MOS for each audio [here](https://github.com/Edresson/YourTTS/tree/main/metrics/MOS).
 
 To re-generate our MOS results, follow the instructions [here](https://github.com/Edresson/YourTTS/tree/main/metrics/MOS). To predict the test sentences and generate the SECS, please use the Jupyter Notebooks available [here](https://github.com/Edresson/YourTTS/tree/main/metrics/SECS).
+### Test Speakers:
+  LibriTTS (test clean): 1188, 1995, 260, 1284, 2300, 237, 908, 1580, 121 and 1089
+  
+  VCTK: p261, p225, p294, p347, p238, p234, p248, p335, p245, p326 and p302
+  
+  MLS Portuguese:  12710, 5677, 12249, 12287, 9351, 11995, 7925, 3050, 4367 and 13069
+  
 
