@@ -36,6 +36,25 @@ All the released checkpoints are licensed under CC BY-NC-ND 4.0
 | Exp 4. YourTTS-EN(VCTK+LibriTTS)-PT-FR SCL | [link](https://drive.google.com/drive/folders/15G-QS5tYQPkqiXfAdialJjmuqZV0azQV?usp=sharing) |
 
 
+## Coqui TTS released model
+### TTS
+To use the [🐸 TTS](https://github.com/coqui-ai/TTS) released YourTTS model for Text-to-Speech use the following command: 
+```
+tts  --text "This is an example!" --model_name tts_models/multilingual/multi-dataset/your_tts  --speaker_wav target_speaker_wav.wav --language_idx "en"
+```
+Considering the "target_speaker_wav.wav" an audio sample from the target speaker.
+
+
+### Voice conversion
+
+To use the [🐸 TTS](https://github.com/coqui-ai/TTS) released YourTTS model for voice conversion use the following command: 
+
+```
+tts --model_name tts_models/multilingual/multi-dataset/your_tts  --speaker_wav target_speaker_wav.wav --reference_wav  target_content_wav.wav --language_idx "en"
+```
+Considering the "target_content_wav.wav" as the reference wave file to convert into the voice of the  "target_speaker_wav.wav" speaker.
+
+
 ## Results replicability
 
 To insure replicability, we make the audios used to generate the MOS available [here](https://github.com/Edresson/YourTTS/releases/download/MOS/Audios_MOS.zip). In addition, we provide the MOS for each audio [here](https://github.com/Edresson/YourTTS/tree/main/metrics/MOS).
