@@ -18,6 +18,7 @@ All of our experiments were implemented on the [Coqui TTS](https://github.com/co
 |-----------------------------|------------------------------------------------------------------------------------------------|
 | Zero-Shot TTS               | [link](https://colab.research.google.com/drive/1WArisOG8vLGvrnoaLyEBOlJ0jG3LDtc2?usp=sharing)  |
 | Zero-Shot VC                | [link](https://colab.research.google.com/drive/1gjdwOKCZuavPn_5oy8QA01sKmXpEq5AZ?usp=sharing) |
+| Zero-Shot VC - Experiment 1 (trained with just VCTK)             | [link](https://colab.research.google.com/drive/1r0NDBxxW5RZjQ1Jy99XohnY6thYWNBCd?usp=sharing) |
 
 
 ## Checkpoints
