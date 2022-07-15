@@ -39,7 +39,7 @@ All the released checkpoints are licensed under CC BY-NC-ND 4.0
 
 ## Coqui TTS released model
 ### TTS
-To use the [🐸 TTS](https://github.com/coqui-ai/TTS) released YourTTS model for Text-to-Speech use the following command: 
+To use the [🐸 TTS version v0.7.0](https://github.com/coqui-ai/TTS) released YourTTS model for Text-to-Speech use the following command: 
 ```
 tts  --text "This is an example!" --model_name tts_models/multilingual/multi-dataset/your_tts  --speaker_wav target_speaker_wav.wav --language_idx "en"
 ```
