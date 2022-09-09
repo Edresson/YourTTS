@@ -93,6 +93,8 @@ In "d_vector_file" you need to pass the speaker embeddings of the speakers. To e
 
 ## Citation
 
+### Preprint
+
 ```
 
 @ARTICLE{2021arXiv211202418C,
@@ -109,6 +111,19 @@ In "d_vector_file" you need to pass the speaker embeddings of the speakers. To e
   primaryClass = {cs.SD},
   adsurl = {https://ui.adsabs.harvard.edu/abs/2021arXiv211202418C},
   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+```
+
+### Published paper at ICML
+```
+@inproceedings{casanova2022yourtts,
+  title={Yourtts: Towards zero-shot multi-speaker tts and zero-shot voice conversion for everyone},
+  author={Casanova, Edresson and Weber, Julian and Shulby, Christopher D and Junior, Arnaldo Candido and G{\"o}lge, Eren and Ponti, Moacir A},
+  booktitle={International Conference on Machine Learning},
+  pages={2709--2720},
+  year={2022},
+  organization={PMLR}
 }
 
 ```
