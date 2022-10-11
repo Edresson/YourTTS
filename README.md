@@ -83,9 +83,9 @@ To replicate the training you can use this branch and with the config.json avail
 If you want to use the latest version of the  Coqui TTS you can get the config.json from the [Coqui released model](https://github.com/coqui-ai/TTS/releases/download/v0.5.0_models/tts_models--multilingual--multi-dataset--your_tts.zip). 
 
 
-With config.json in hand, you first need to adjust some config.json paths. For example, "datasets", "output_path" and "d_vector_file".
+With config.json in hand, you first need to adjust some config.json paths. For example, "datasets", "output_path", "d_vector_file", "speaker_encoder_config_path" and "speaker_encoder_model_path".
 
-In "d_vector_file" you need to pass the speaker embeddings of the speakers. To extract the speaker's embeddings use the following command:
+In "d_vector_file" you need to pass the speaker embeddings of the speakers. To extract the speaker's embeddings using our released speaker encoder use the following command:
 `` python3 TTS/bin/compute_embeddings.py model_se.pth.tar config_se.json config.json d_vector_file.json`` 
 
 "model_se.pth.tar" and "config_se.json" can be found in [Coqui released model](https://github.com/coqui-ai/TTS/releases/download/v0.5.0_models/tts_models--multilingual--multi-dataset--your_tts.zip) while config.json is the config you set the paths for.
