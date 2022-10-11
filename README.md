@@ -76,19 +76,26 @@ To re-generate our MOS results, follow the instructions [here](https://github.co
 
 The article was made using my Coqui TTS fork on the branch [multilingual-torchaudio-SE](https://github.com/Edresson/Coqui-TTS/tree/multilingual-torchaudio-SE/).
 
-To replicate the training you can use this branch and with the config.json available with each checkpoint use:
- `python3 TTS/bin/train_tts.py --config_path config.json`
-
 
 If you want to use the latest version of the  Coqui TTS you can get the config.json from the [Coqui released model](https://github.com/coqui-ai/TTS/releases/download/v0.5.0_models/tts_models--multilingual--multi-dataset--your_tts.zip). 
 
 
-With config.json in hand, you first need to adjust some config.json paths. For example, "datasets", "output_path", "d_vector_file", "speaker_encoder_config_path" and "speaker_encoder_model_path".
-
-In "d_vector_file" you need to pass the speaker embeddings of the speakers. To extract the speaker's embeddings using our released speaker encoder use the following command:
-`` python3 TTS/bin/compute_embeddings.py model_se.pth.tar config_se.json config.json d_vector_file.json`` 
+With config.json in hand, you first need to change the "datasets" configuration to your dataset. Using the config.json with the "datasets" configuration adjusted you need to extract the speaker's embeddings using our released speaker encoder using the following command:
+`` python3 TTS/bin/compute_embeddings.py --model_path model_se.pth.tar --config_path  config_se.json --config_dataset_path  config.json --output_path d_vector_file.json`` 
 
 "model_se.pth.tar" and "config_se.json" can be found in [Coqui released model](https://github.com/coqui-ai/TTS/releases/download/v0.5.0_models/tts_models--multilingual--multi-dataset--your_tts.zip) while config.json is the config you set the paths for.
+
+
+
+Other parameters that you should change are on the "config.json":
+  - "d_vector_file":  Now that you have the speaker embedding file (d_vector_file.json) adjust the "d_vector_file" parameter on the config setting to the path of the speaker embedding file.
+  - "output_path": the path for saving the checkpoint and training logs
+  - "speaker_encoder_config_path": The speaker encoder config to use to compute the speaker cosine similarity loss/speaker consistency loss ( set it to the config_se.json path)
+  - "speaker_encoder_model_path": The speaker encoder checkpoint used to compute the speaker cosine similarity loss/speaker consistency loss ( set it to the "config_se.json" path)
+
+Now that you have the config.json configured to replicate the training you can use the following command (if you like you can use the --restore_path {checkpoint_path} to do transfer learning from a checkpoint and speed up the training:
+ `python3 TTS/bin/train_tts.py --config_path config.json`
+ 
 
 
 ## Citation
