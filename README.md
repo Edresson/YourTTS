@@ -73,6 +73,7 @@ To re-generate our MOS results, follow the instructions [here](https://github.co
   
 ## Reproducibility
 
+To fully replicate experiment 1 we provide a [recipe on  Coqui TTS](https://github.com/coqui-ai/TTS/blob/dev/recipes/vctk/yourtts/train_yourtts.py). This recipe downloads, resample, extracts the speaker embeddings and trains the model without the need of any changes in the code.
 
 The article was made using my Coqui TTS fork on the branch [multilingual-torchaudio-SE](https://github.com/Edresson/Coqui-TTS/tree/multilingual-torchaudio-SE/).
 
