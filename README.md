@@ -4,6 +4,11 @@
 In our recent [paper](https://arxiv.org/abs/2112.02418) we propose the YourTTS model. YourTTS brings the power of a multilingual approach to the task of zero-shot multi-speaker TTS. Our method builds upon the VITS model and adds several novel modifications for zero-shot multi-speaker and multilingual training. We achieved state-of-the-art (SOTA) results in zero-shot multi-speaker TTS and results comparable to SOTA in zero-shot voice conversion on the VCTK dataset. Additionally, our approach achieves promising results in a target language with a single-speaker dataset, opening possibilities for zero-shot multi-speaker TTS and zero-shot voice conversion systems in low-resource languages. Finally, it is possible to fine-tune the YourTTS model with less than 1 minute of speech and achieve state-of-the-art results in voice similarity and with reasonable quality. This is important to allow synthesis for speakers with a very different voice or recording characteristics from those seen during training. 
 
 
+## Erratum 
+In Section 2 of YourTTS paper, we have defined the Speaker Consistency Loss (SCL) function. In addition, we have used this loss function on 4 fine-tuning experiments in Sections 3 and 4 (EXP. 1 + SCL, EXP. 2 + SCL, EXP. 3 + SCL,  and EXP. 4 + SCL). However, due to an implementation mistake, the gradient of this loss function was not propagated for the model during the training. It means that the fine-tuning experiments that  used this loss are equivalent to training the model for more steps without the Speaker Consistency Loss. This bug was discovered by [Tomáš Nekvinda](https://github.com/Tomiinek)  and reported on [issue number  2348  of the Coqui TTS repository](https://github.com/coqui-ai/TTS/issues/2348).  This bug was fixed on the [pull request number 2364 on the Coqui TTS repository](https://github.com/coqui-ai/TTS/pull/2364). Currently,  it is fixed for Coqui TTS version v0.12.0 or higher.  We would like to thank Tomáš Nekvinda for finding the bug and reporting it.
+
+
+
 ## Production version
 Come try our latest and greatest fullband english only model https://coqui.ai/
 
